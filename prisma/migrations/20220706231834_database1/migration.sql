@@ -8,7 +8,7 @@ CREATE TABLE [dbo].[users] (
     [okulNo] INT NOT NULL,
     [email] NVARCHAR(1000) NOT NULL,
     [sifre] NVARCHAR(1000) NOT NULL,
-    [role] NVARCHAR(1000) NOT NULL CONSTRAINT [users_role_df] DEFAULT 'student',
+    [role] NVARCHAR(1000) NOT NULL,
     CONSTRAINT [users_pkey] PRIMARY KEY CLUSTERED ([id]),
     CONSTRAINT [users_okulNo_key] UNIQUE NONCLUSTERED ([okulNo]),
     CONSTRAINT [users_email_key] UNIQUE NONCLUSTERED ([email])

@@ -15,7 +15,8 @@ model users {
   okulNo       Int        @unique
   email        String     @unique
   sifre        String
-  role         String    
+  role         String
+  admin       Boolean     @default(false)    
 }
 
 model kiralananlar{
