@@ -1,5 +1,9 @@
+import { useState } from "react"
+
 
 export default function Home(){
+    const [email,setEmail]=useState('denizxman@hotmail.com')
+    const [sifre,setsifre]=useState('123456')
     return(
         <div>
             <button onClick={test}>Tıkla</button>
@@ -11,8 +15,8 @@ export default function Home(){
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(
-                {email:'denizxman@hotmail.com',
-                sifre:'123456'}
+                {xemail:email,
+                xsifre:sifre}
             )
         })
         const res = await req.json()
