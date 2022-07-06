@@ -38,5 +38,6 @@ export default async function (req:NextApiRequest,res:NextApiResponse) {
     
         })
         res.json(data)
+        prisma.$disconnect()
     }
 }
