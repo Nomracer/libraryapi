@@ -23,6 +23,12 @@ model kirakitap {
   kitapId Int       
   teslimTarih String  @default("")
 }
+model kiralananlar{
+  id      Int       @id @default(autoincrement())
+  userId  Int       
+  kitapId Int       
+  teslimTarih String
+}
 
 model kitaplar {
   id          Int         @id @default(autoincrement())

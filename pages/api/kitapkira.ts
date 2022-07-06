@@ -9,13 +9,13 @@ export default async function (req:NextApiRequest,res:NextApiResponse){
         const newTime=new Date(newDate)
         console.log(newTime)
         const {userId,kitapId,time}=req.body
-        let bookData:Prisma.kirakitapCreateInput
+        let bookData:Prisma.kiralananlarCreateInput
         bookData={
             userId:userId,
             kitapId:kitapId,
             teslimTarih:newTime.toString()
         }
-        const createBook= await prisma.kirakitap.create({
+        const createBook= await prisma.kiralananlar.create({
             data:bookData
         })
         res.json(createBook)
