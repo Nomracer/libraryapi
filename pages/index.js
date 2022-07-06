@@ -72,6 +72,6 @@ export default function Home(){
             )
         })
         const res = await req.json()
-        console.log(res)
+        alert('Kitabınız başarıyla kiralandı')
     }
 }

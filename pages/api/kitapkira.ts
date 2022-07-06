@@ -19,5 +19,6 @@ export default async function (req:NextApiRequest,res:NextApiResponse){
             data:bookData
         })
         res.json(createBook)
+        prisma.$disconnect()
     }
 }
