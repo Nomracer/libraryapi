@@ -11,8 +11,8 @@ export default async function (req:NextApiRequest,res:NextApiResponse){
         const {userId,kitapId,time}=req.body
         let bookData:Prisma.kirakitapCreateInput
         bookData={
-            userId:userId,
-            kitapId:kitapId,
+            userId:parseInt(userId),
+            kitapId:parseInt(kitapId),
             teslimTarih:newTime.toString()
         }
         const createBook= await prisma.kirakitap.create({
