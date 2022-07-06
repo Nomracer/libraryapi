@@ -8,6 +8,7 @@ export default function Home(){
         <div>
             <button onClick={test}>Tıkla</button>
             <button onClick={test2}>Tıkla2</button>
+            <button onClick={test3}>Tıkla3</button>
         </div>
     )
     async function test(){
@@ -31,6 +32,24 @@ export default function Home(){
                     method:'search',
                     adi:'Anna',
                     basimYili:'1999'
+                }
+            )
+        })
+        const res=await req.json()
+        console.log(res)
+    }
+    async function test3(){
+        const req=await fetch('./api/kitapekle',{
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify(
+                {
+                    adi:'denem1',
+                    yazar:'benim',
+                    basimYili:'1998',
+                    adet:3,
+                    sayfaSayisi:350,
+                    kategori:'Dedektif'
                 }
             )
         })
