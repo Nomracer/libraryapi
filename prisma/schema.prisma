@@ -10,14 +10,6 @@ datasource db {
   url      = "sqlserver://library-gurkan.database.windows.net:1433;database=Library;user=Nomracer;password=Sebnem1977"
   shadowDatabaseUrl="sqlserver://library-gurkan.database.windows.net:1433;database=LibraryShadow;user=Nomracer;password=Sebnem1977"
 }
-model users {
-  id           Int        @id @default(autoincrement())
-  okulNo       Int        @unique
-  email        String     @unique
-  sifre        String
-  role         String
-  admin       Boolean     @default(false)    
-}
 model userdatas{
   id      Int         @id @default(autoincrement())
   okulNo  Int         @unique

@@ -3,15 +3,18 @@ BEGIN TRY
 BEGIN TRAN;
 
 -- CreateTable
-CREATE TABLE [dbo].[users] (
+CREATE TABLE [dbo].[userdatas] (
     [id] INT NOT NULL IDENTITY(1,1),
     [okulNo] INT NOT NULL,
     [email] NVARCHAR(1000) NOT NULL,
     [sifre] NVARCHAR(1000) NOT NULL,
-    [role] NVARCHAR(1000) NOT NULL,
-    CONSTRAINT [users_pkey] PRIMARY KEY CLUSTERED ([id]),
-    CONSTRAINT [users_okulNo_key] UNIQUE NONCLUSTERED ([okulNo]),
-    CONSTRAINT [users_email_key] UNIQUE NONCLUSTERED ([email])
+    [admin] BIT NOT NULL,
+    [teacher] BIT NOT NULL,
+    [student] BIT NOT NULL,
+    CONSTRAINT [userdatas_pkey] PRIMARY KEY CLUSTERED ([id]),
+    CONSTRAINT [userdatas_okulNo_key] UNIQUE NONCLUSTERED ([okulNo]),
+    CONSTRAINT [userdatas_email_key] UNIQUE NONCLUSTERED ([email]),
+    CONSTRAINT [userdatas_sifre_key] UNIQUE NONCLUSTERED ([sifre])
 );
 
 -- CreateTable
