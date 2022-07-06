@@ -13,7 +13,7 @@ export default async function (req:NextApiRequest,res:NextApiResponse){
         bookData={
             userId:userId,
             kitapId:kitapId,
-            time:newTime
+            teslimTarih:newTime.toString()
         }
         const createBook= await prisma.kirakitap.create({
             data:bookData
