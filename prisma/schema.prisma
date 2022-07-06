@@ -19,8 +19,8 @@ model users {
 
 model kirakitap {
   id      Int       @id @default(autoincrement())
-  userId  Int       @default(0)
-  kitapId Int       @default(0)
+  userId  Int       
+  kitapId Int       
   teslimTarih String  @default("")
 }
 
