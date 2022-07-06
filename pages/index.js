@@ -14,7 +14,7 @@ export default function Home(){
         </div>
     )
     async function test(){
-        const req= await fetch('https://libraryapi.vercel.app/api/logincheck',{
+        const req= await fetch('./api/logincheck',{
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(

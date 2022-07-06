@@ -18,6 +18,15 @@ model users {
   role         String
   admin       Boolean     @default(false)    
 }
+model userdatas{
+  id      Int         @id @default(autoincrement())
+  okulNo  Int         @unique
+  email   String      @unique
+  sifre   String      @unique
+  admin   Boolean     
+  teacher Boolean   
+  student Boolean
+}
 
 model kiralananlar{
   id      Int       @id @default(autoincrement())
