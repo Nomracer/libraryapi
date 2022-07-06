@@ -11,7 +11,7 @@ export default function Home(){
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(
-                {okulNo:123123,
+                {email:'denizxman@hotmail.com',
                 sifre:'123456'}
             )
         })
