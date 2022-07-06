@@ -8,7 +8,7 @@ export default async function (req:NextApiRequest,res:NextApiResponse){
         newDate.setDate(date.getDate()+7)
         const newTime=new Date(newDate)
         console.log(newTime)
-        const {userId,kitapId,time}=req.body
+        const {userId,kitapId}=req.body
         let bookData:Prisma.kiralananlarCreateInput
         bookData={
             userId:userId,

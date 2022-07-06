@@ -67,8 +67,7 @@ export default function Home(){
             body:JSON.stringify(
                 {
                     userId:2,
-                    kitapId:2,
-                    time:time
+                    kitapId:2
                 }
             )
         })
