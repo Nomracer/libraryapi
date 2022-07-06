@@ -15,7 +15,7 @@ model users {
   okulNo       Int        @unique
   email        String     @unique
   sifre        String
-  role          String    
+  role         String    
 }
 
 model kiralananlar{
