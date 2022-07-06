@@ -6,7 +6,7 @@ export default async function(req:NextApiRequest,res:NextApiResponse){
         const {xemail,xsifre}=req.body
         let data:Prisma.userdatasWhereInput
         data={email:xemail,sifre:xsifre}
-        const userdata= await prisma.users.findMany(
+        const userdata= await prisma.userdatas.findMany(
             {
                 where:data
             }
