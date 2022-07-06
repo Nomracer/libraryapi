@@ -18,8 +18,8 @@ export default function Home(){
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(
-                {xemail:email,
-                xsifre:sifre}
+                {xemail:'1',
+                xsifre:'1'}
             )
         })
         const res = await req.json()
