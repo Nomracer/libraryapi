@@ -16,10 +16,19 @@ CREATE TABLE [dbo].[users] (
 -- CreateTable
 CREATE TABLE [dbo].[kirakitap] (
     [id] INT NOT NULL IDENTITY(1,1),
-    [userId] INT NOT NULL CONSTRAINT [kirakitap_userId_df] DEFAULT 0,
-    [kitapId] INT NOT NULL CONSTRAINT [kirakitap_kitapId_df] DEFAULT 0,
+    [userId] INT NOT NULL,
+    [kitapId] INT NOT NULL,
     [teslimTarih] NVARCHAR(1000) NOT NULL CONSTRAINT [kirakitap_teslimTarih_df] DEFAULT '',
     CONSTRAINT [kirakitap_pkey] PRIMARY KEY CLUSTERED ([id])
+);
+
+-- CreateTable
+CREATE TABLE [dbo].[kiralananlar] (
+    [id] INT NOT NULL IDENTITY(1,1),
+    [userId] INT NOT NULL,
+    [kitapId] INT NOT NULL,
+    [teslimTarih] NVARCHAR(1000) NOT NULL,
+    CONSTRAINT [kiralananlar_pkey] PRIMARY KEY CLUSTERED ([id])
 );
 
 -- CreateTable
