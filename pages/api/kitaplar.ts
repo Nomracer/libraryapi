@@ -12,6 +12,7 @@ export default async function (req:NextApiRequest,res:NextApiResponse) {
     async function List() {
         const data=await prisma.kitaplar.findMany()
         res.json(data)
+        prisma.$disconnect()
     }
     async function Search(){
         const data= await prisma.kitaplar.findMany({
