@@ -11,6 +11,7 @@ export default function Home(){
             <button onClick={test2}>Tıkla2</button>
             <button onClick={test3}>Tıkla3</button>
             <button onClick={test4}>Tıkla4</button>
+            <button onClick={test5}>Tıkla5</button>
         </div>
     )
     async function test(){
@@ -73,5 +74,23 @@ export default function Home(){
         })
         const res = await req.json()
         alert('Kitabınız başarıyla kiralandı')
+    }
+    async function test5(){
+        const req = await fetch('./api/signup',{
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify({
+                okulNo:6,
+                email:'3232',
+                sifre:'asdasd',
+                admin:false,
+                teacher:false,
+                student:true,
+            })
+        })
+        const res = await req.json()
+        if(res){
+            alert("Kullanıcı Başarıyla Eklendi")
+        }
     }
 }

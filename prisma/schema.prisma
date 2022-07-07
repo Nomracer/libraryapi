@@ -18,6 +18,8 @@ model userdatas{
   admin   Boolean     
   teacher Boolean   
   student Boolean
+  name    String
+  surname String
 }
 
 model kiralananlar{
