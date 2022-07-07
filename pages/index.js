@@ -27,12 +27,13 @@ export default function Home(){
         console.log(res)
     }
     async function test2(){
-        const req= await fetch('https://libraryapi.vercel.app/api/kitapekle',{
+        const req= await fetch('./api/kitaplar',{
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(
                 {
-                    method:'list'
+                    method:'search',
+                    name:'aa'
                 }
             )
         })
@@ -40,7 +41,7 @@ export default function Home(){
         console.log(res)
     }
     async function test3(){
-        const req=await fetch('https://libraryapi.vercel.app/api/kitapekle',{
+        const req=await fetch('https://libraryapi.vercel.app/api/kitaplar',{
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(
@@ -86,6 +87,8 @@ export default function Home(){
                 admin:false,
                 teacher:false,
                 student:true,
+                name:'Deniz',
+                surname:'arlı'
             })
         })
         const res = await req.json()

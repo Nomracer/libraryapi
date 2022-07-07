@@ -18,6 +18,10 @@ export default async function (req:NextApiRequest,res:NextApiResponse){
         const createBook= await prisma.kiralananlar.create({
             data:bookData
         })
+        const stokDown = await prisma.kitaplar.update({
+            where:{id:kitapId},
+            data:{kalanKitap:{decrement:1}}
+        })
         res.json(createBook)
         prisma.$disconnect()
     }
